@@ -6,8 +6,6 @@
     + 1.根据懒加载中的方法，创建多功能窗口
     + 2.创建一个UINavigationController控制器来管理界面
     + 3.创建UINavigationController的根控制器（数据源控制器）
-
-
 ```objc
 #import "LSLTapSlideViewController.h"
 ```
@@ -60,7 +58,7 @@ return _window_;
 [self.window_ show];
 }
 ```
-
+### demo1演示gif效果图
 ![](https://github.com/SilongLi/LSLDrawerEffectDemo/raw/master/LSLDrawerEffectDemo/Logo/多功能抽屉界面demo1.gif)
 
 #### 多功能界面模式二： 选中cell时，弹出显示数据详情多功能窗口，拖拽时隐藏
@@ -140,7 +138,7 @@ _showVC  = showVC;
 }
 
 ```
-
+### demo2演示gif效果图
 ![](https://github.com/SilongLi/LSLDrawerEffectDemo/raw/master/LSLDrawerEffectDemo/Logo/多功能抽屉界面demo2.gif)
 
 
@@ -163,4 +161,5 @@ slideVC.view.frame = self.view.frame;
 self.navigationController.navigationBar.hidden = YES;
 }
 ```
+### demo3演示gif效果图
 ![](https://github.com/SilongLi/LSLDrawerEffectDemo/raw/master/LSLDrawerEffectDemo/Logo/多功能抽屉界面demo3.gif)
