@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vyo-LC-w55">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Demo Navigation Controller-->
+        <scene sceneID="ybL-eZ-9mO">
+            <objects>
+                <navigationController id="vyo-LC-w55" customClass="DemoNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MdL-Gs-03W">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GBG-b5-zCt" kind="relationship" relationship="rootViewController" id="P2G-tN-hE7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wsD-lD-Hkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-391" y="-334"/>
+        </scene>
+        <!--多功能抽屉窗口-->
+        <scene sceneID="iIm-q0-rGc">
+            <objects>
+                <viewController id="GBG-b5-zCt" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T3H-DV-fgg"/>
+                        <viewControllerLayoutGuide type="bottom" id="0mT-gq-teN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uoo-0j-Szt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYA-4o-yCR">
+                                <rect key="frame" x="200" y="415" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="7Xm-Fc-Jm9"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ivy-16-fBt"/>
+                                </constraints>
+                                <state key="normal" title="左右两边的拖拽抽屉 demo3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnThreeClick:" destination="GBG-b5-zCt" eventType="touchUpInside" id="4jb-ue-0VW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjA-6C-cXo">
+                                <rect key="frame" x="225" y="285" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="FkN-iu-B38"/>
+                                    <constraint firstAttribute="height" constant="30" id="cYa-6O-xD0"/>
+                                </constraints>
+                                <state key="normal" title="多界面的抽屉 demo2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnOneClick:" destination="GBG-b5-zCt" eventType="touchUpInside" id="gRw-KM-nfP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-x7-T8P">
+                                <rect key="frame" x="150" y="155" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Dq8-hQ-BbX"/>
+                                    <constraint firstAttribute="height" constant="30" id="QCy-mW-fEc"/>
+                                </constraints>
+                                <state key="normal" title="点击弹出多功能的抽屉窗口 demo1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnTwoClick:" destination="GBG-b5-zCt" eventType="touchUpInside" id="0eR-cQ-iEP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mYA-4o-yCR" firstAttribute="top" secondItem="UjA-6C-cXo" secondAttribute="bottom" constant="100" id="Jfv-lE-IBR"/>
+                            <constraint firstAttribute="centerX" secondItem="UjA-6C-cXo" secondAttribute="centerX" id="KFL-eM-Y9E"/>
+                            <constraint firstAttribute="centerY" secondItem="UjA-6C-cXo" secondAttribute="centerY" id="M2x-UV-Wge"/>
+                            <constraint firstAttribute="centerX" secondItem="mYA-4o-yCR" secondAttribute="centerX" id="ajT-bI-Udj"/>
+                            <constraint firstAttribute="centerX" secondItem="aIB-x7-T8P" secondAttribute="centerX" id="mEi-cQ-k8i"/>
+                            <constraint firstItem="UjA-6C-cXo" firstAttribute="top" secondItem="aIB-x7-T8P" secondAttribute="bottom" constant="100" id="xbj-f1-shV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="多功能抽屉窗口" id="WzM-Pn-g9r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NIu-oL-lcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="290" y="-339"/>
+        </scene>
+    </scenes>
+</document>
