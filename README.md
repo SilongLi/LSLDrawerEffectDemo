@@ -61,7 +61,7 @@ return _window_;
 }
 ```
 
-![](多功能抽屉界面demo1.gif)
+![](https://github.com/SilongLi/LSLDrawerEffectDemo/raw/master/LSLDrawerEffectDemo/Logo/多功能抽屉界面demo1.gif)
 
 #### 多功能界面模式二： 选中cell时，弹出显示数据详情多功能窗口，拖拽时隐藏
 
@@ -141,7 +141,7 @@ _showVC  = showVC;
 
 ```
 
-![](多功能抽屉界面demo2.gif)
+![](https://github.com/SilongLi/LSLDrawerEffectDemo/raw/master/LSLDrawerEffectDemo/Logo/多功能抽屉界面demo2.gif)
 
 
 #### 多功能界面模式三：多功能抽屉效果的练习demo
@@ -163,4 +163,4 @@ slideVC.view.frame = self.view.frame;
 self.navigationController.navigationBar.hidden = YES;
 }
 ```
-![](多功能抽屉界面demo3.gif)
+![](https://github.com/SilongLi/LSLDrawerEffectDemo/raw/master/LSLDrawerEffectDemo/Logo/多功能抽屉界面demo3.gif)
