@@ -21,6 +21,9 @@
 
 /** 数据源窗口 */
 @property(nonatomic,strong)LSLTestViewController *testVC;
+
+/**  */
+@property(nonatomic,strong)UIView *wind;
 @end
 
 @implementation ViewController
@@ -43,10 +46,10 @@
        LSLTapSlideViewController *window_ = [LSLTapSlideViewController tapSlideWithNavigationController:nav];
         
         // 3.2 根据导航控制器的宽度来创建
-//        CHTapSlideViewController *window_ = [CHTapSlideViewController tapSlideWithNavigationController:nav withNavWidth:300];
+//        LSLTapSlideViewController *window_ = [LSLTapSlideViewController tapSlideWithNavigationController:nav withNavWidth:300];
         
         // 3.3 根据右边偏移量来创建
-//        CHTapSlideViewController *window_ = [CHTapSlideViewController tapSlideWithNavigationController:nav offsetX:100];
+//        LSLTapSlideViewController *window_ = [LSLTapSlideViewController tapSlideWithNavigationController:nav offsetX:100];
         
         CHWeakSelf;
         // 4.如果需要给窗口推荐关闭按钮，则可使用block实现
@@ -68,10 +71,23 @@
 // 点击弹出新界面的抽屉 demo
 - (IBAction)btnTwoClick:(id)sender {
     
-    [self.window_ show];
+//    [self.window_ show];
+    UIView *wind = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    wind.backgroundColor = [UIColor colorWithRed:200/255.0 green:200/255.0 blue:200/255.0 alpha:0.6];
+    
+//    wind.windowLevel = UIWindowLevelAlert;
+    [self.view  addSubview:wind];
+    wind.userInteractionEnabled = NO;
+    
+    _wind = wind;
+    
+    wind.hidden = NO;
 }
 
-
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"点击了下面的view");
+}
 
 /******************************************************************************/
 /************************************ demo 2 **********************************/
